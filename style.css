@@ -1,10 +1,18 @@
 * {
-  box-sizing: content-box;
+  box-sizing: border-box;
+}
+
+header,
+section {
+  overflow-x: hidden;
 }
 
 #navbar {
-  height: 7vh;
   transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba(0, 0, 0, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
 }
 
 /* Background color on scroll */
@@ -38,6 +46,10 @@ header {
   padding-top: 20px;
 }
 
+h3 {
+  font-weight: bolder;
+}
+
 #brand {
   max-width: 100%;
   max-height: 40vh;
@@ -45,7 +57,118 @@ header {
 }
 
 #section-1 {
-  background-color: #f8f9fa; /* Optional, to visually differentiate the sections */
-  padding-top: 100px;
-  padding-bottom: 100px;
+  background-color: #f8f9fa;
+  height: 80%;
+  overflow: hidden;
+}
+
+.accordionImg {
+  height: 35em;
+  object-fit: fill;
+}
+
+/* CAROUSEL */
+.carousel-inner {
+  padding: 1em;
+  display: flex; /* Use flexbox */
+  overflow: hidden; /* Prevent overflow */
+}
+
+.card {
+  margin: 0 0.5em;
+  box-shadow: 2px 6px 8px 0 rgba(22, 22, 26, 0.18);
+  border: none;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.06);
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  background-color: #e1e1e1;
+  width: 6vh;
+  height: 6vh;
+  border-radius: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.card .img-wrapper {
+  max-width: 100%;
+  height: 20em;
+  display: flex;
+}
+.card img {
+  max-height: 100%;
+}
+
+/* Desktop */
+@media (min-width: 768px) {
+  .carousel-item {
+    margin-right: 0;
+    flex: 0 0 33.333333%;
+    display: block;
+  }
+  .carousel-inner {
+    display: flex;
+  }
+  .navbar-brand img {
+    height: 3em;
+  }
+}
+/* Mobile */
+@media (max-width: 767px) {
+  .carousel-inner {
+    max-width: 80%;
+  }
+
+  .card .img-wrapper {
+    height: 8em;
+  }
+
+  /* Reduce navbar padding */
+  .navbar {
+    padding: 0.5rem 1rem; /* Adjust as needed */
+  }
+
+  /* Reduce the logo size */
+  .navbar-brand img {
+    width: 30px; /* Adjust the logo size for mobile */
+    height: auto;
+  }
+
+  /* Optional: Adjust navbar brand text size */
+  .navbar-brand {
+    font-size: 1rem; /* Reduce font size */
+  }
+
+  /* Optional: Adjust navbar height */
+  #navbar-container {
+    min-height: 50px; /* Reduce the height of the navbar */
+  }
+
+  /* Reduce the size of the toggle button */
+  .navbar-toggler {
+    padding: 0.25rem 0.5rem;
+  }
+
+  .nav-item {
+    margin: 0 !important;
+  }
+
+  .accordionImg {
+    height: 15em;
+  }
+
+  #brand {
+    max-width: 90%;
+    max-height: 30vh;
+    object-fit: contain;
+  }
+
+  #section-1 {
+    background-color: #f8f9fa;
+    height: 50%;
+  }
 }

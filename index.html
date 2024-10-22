@@ -20,14 +20,9 @@
         class="navbar navbar-expand-sm fixed-top fw-bold fst-italic"
         id="navbar"
       >
-        <div class="container">
+        <div class="container-fluid" id="navbar-container">
           <a class="navbar-brand" href="#">
-            <img
-              src="assets/images/icon.png"
-              alt="Brat"
-              width="70"
-              height="70"
-            />
+            <img src="assets/images/icon.png" alt="Brat" />
           </a>
           <button
             class="navbar-toggler d-lg-none"
@@ -71,7 +66,7 @@
           </div>
         </div>
       </nav>
-
+      <!-- Banner-->
       <div class="container text-center" id="banner">
         <div class="row">
           <div class="col-md-10 col-sm-10">
@@ -90,12 +85,176 @@
     </header>
 
     <main>
+      <!-- Carousel-->
       <section class="section" id="section-1">
         <div class="container text-center">
           <div class="row">
             <div class="col-md-12">
-              <h3>Featured</h3>
+              <div id="carouselExampleControls" class="carousel">
+                <div class="carousel-inner mx-auto">
+                  <div class="carousel-item active">
+                    <div class="card">
+                      <div class="img-wrapper">
+                        <img
+                          src="assets/images/carSample1.jpg"
+                          class="d-block w-100 card-img-top"
+                          alt="assets/images/"
+                        />
+                      </div>
+                      <div class="card-body">
+                        <h5 class="card-title">Card title 1</h5>
+                        <p class="card-text">
+                          Some quick example text to build on the card title and
+                          make up the bulk of the card's content.
+                        </p>
+                        <a href="#" class="btn btn-primary">Take Me There!</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <div class="card">
+                      <div class="img-wrapper">
+                        <img
+                          src="assets/images/carSample2.jpg"
+                          class="d-block w-100 card-img-top"
+                          alt="assets/images/"
+                        />
+                      </div>
+                      <div class="card-body">
+                        <h5 class="card-title">Card title 2</h5>
+                        <p class="card-text">
+                          Some quick example text to build on the card title and
+                          make up the bulk of the card's content.
+                        </p>
+                        <a href="#" class="btn btn-primary">Take Me There!</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <div class="card">
+                      <div class="img-wrapper">
+                        <img
+                          src="assets/images/carSample3.jpeg"
+                          class="d-block w-100 card-img-top"
+                          alt="assets/images/"
+                        />
+                      </div>
+                      <div class="card-body">
+                        <h5 class="card-title">Card title 3</h5>
+                        <p class="card-text">
+                          Some quick example text to build on the card title and
+                          make up the bulk of the card's content.
+                        </p>
+                        <a href="#" class="btn btn-primary">Take Me There!</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <div class="card">
+                      <div class="img-wrapper">
+                        <img
+                          src="assets/images/choco.png"
+                          class="d-block w-100 card-img-top"
+                          alt="assets/images/"
+                        />
+                      </div>
+                      <div class="card-body">
+                        <h5 class="card-title">Card title 4</h5>
+                        <p class="card-text">
+                          Some quick example text to build on the card title and
+                          make up the bulk of the card's content.
+                        </p>
+                        <a href="#" class="btn btn-primary">Take Me There!</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <div class="card">
+                      <div class="img-wrapper">
+                        <img
+                          src="assets/images/smotthie.png"
+                          class="d-block w-100 card-img-top"
+                          alt="assets/images/"
+                        />
+                      </div>
+                      <div class="card-body">
+                        <h5 class="card-title">Card title 5</h5>
+                        <p class="card-text">
+                          Some quick example text to build on the card title and
+                          make up the bulk of the card's content.
+                        </p>
+                        <a href="#" class="btn btn-primary">Take Me There!</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <button
+                  class="carousel-control-prev"
+                  type="button"
+                  data-bs-target="#carouselExampleControls"
+                  data-bs-slide="prev"
+                >
+                  <span
+                    class="carousel-control-prev-icon"
+                    aria-hidden="true"
+                  ></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button
+                  class="carousel-control-next"
+                  type="button"
+                  data-bs-target="#carouselExampleControls"
+                  data-bs-slide="next"
+                >
+                  <span
+                    class="carousel-control-next-icon"
+                    aria-hidden="true"
+                  ></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
             </div>
+          </div>
+        </div>
+      </section>
+      <!-- Best Sellers-->
+      <section class="section" id="section-2">
+        <div class="container text-center">
+          <div class="row pt-5 row-sell">
+            <img
+              class="accordionImg"
+              src="assets/images/carSample1.jpg"
+              alt="Car Sample 1"
+            />
+          </div>
+          <div class="row pt-5 row-sell">
+            <img
+              class="accordionImg"
+              src="assets/images/carSample2.jpg"
+              alt="Car Sample 1"
+            />
+          </div>
+          <div class="row pt-5 pb-5 row-sell">
+            <img
+              class="accordionImg"
+              src="assets/images/carSample3.jpeg"
+              alt="Car Sample 1"
+            />
+          </div>
+        </div>
+      </section>
+      <!-- Hiring-->
+      <section class="section" id="section-3">
+        <div class="container text-center">
+          <div class="row">
+            <h3>We're Hiring</h3>
+          </div>
+        </div>
+      </section>
+      <section class="section" id="section-4">
+        <div class="container text-center">
+          <div class="row">
+            <h3>Stamp Cards</h3>
           </div>
         </div>
       </section>
@@ -135,17 +294,34 @@
       crossorigin="anonymous"
     ></script>
 
-    <script>
-      window.onscroll = function () {
-        var navbar = document.getElementById("navbar");
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
 
-        // When you scroll down 50px, add the background to the navbar
+    <script src="carousel.js"></script>
+    <script src="accordion.js"></script>
+
+    <script>
+      var toggler = document.querySelector(".navbar-toggler");
+      var navbar = document.getElementById("navbar");
+
+      window.onscroll = function () {
         if (window.scrollY > 50) {
           navbar.classList.add("navbar-bg");
         } else {
           navbar.classList.remove("navbar-bg");
         }
       };
+
+      toggler.addEventListener("click", function () {
+        if (navbar.classList.contains("navbar-bg") && !(window.scrollY > 50)) {
+          navbar.classList.remove("navbar-bg");
+        } else {
+          navbar.classList.add("navbar-bg");
+        }
+      });
     </script>
   </body>
 </html>
