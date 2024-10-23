@@ -11,7 +11,7 @@
     />
     <title>Title</title>
 
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="indexstyle.css" />
   </head>
 
   <body>
@@ -21,8 +21,8 @@
         id="navbar"
       >
         <div class="container-fluid" id="navbar-container">
-          <a class="navbar-brand" href="#">
-            <img src="assets/images/icon.png" alt="Brat" />
+          <a class="navbar-brand" href="index.html">
+            <img src="images/icon.png" alt="Brat" />
           </a>
           <button
             class="navbar-toggler d-lg-none"
@@ -40,19 +40,19 @@
             <ul class="navbar-nav mx-auto mt-2 mt-lg-0">
               <!-- HOME -->
               <li class="nav-item mx-4 fs-3">
-                <a class="nav-link link-body-emphasis" href="#">Home</a>
+                <a class="nav-link link-body-emphasis" href="index.html"">Home</a>
               </li>
 
               <!-- MENU -->
               <li class="nav-item mx-4 fs-3">
-                <a class="nav-link link-body-emphasis" href="#">Menu</a>
+                <a class="nav-link link-body-emphasis" href="menu.html">Menu</a>
               </li>
 
               <!-- ABOUT US -->
               <li class="nav-item dropdown mx-4 fs-3">
                 <a
                   class="nav-link dropdown-toggle link-body-emphasis"
-                  href="#"
+                  href="about.html"
                   id="dropdownId"
                   data-bs-toggle="dropdown"
                   >About Us</a
@@ -71,7 +71,7 @@
         <div class="row">
           <div class="col-md-10 col-sm-10">
             <img
-              src="assets/images/brand.png"
+              src="images/brand.png"
               id="brand"
               alt="Brat Cafe"
               class="img-fluid"
@@ -89,16 +89,16 @@
       <section class="section" id="section-1">
         <div class="container text-center">
           <div class="row">
-            <div class="col-md-12">
+            <div class="col-md-12 col-sm-12 px-0">
               <div id="carouselExampleControls" class="carousel">
                 <div class="carousel-inner mx-auto">
                   <div class="carousel-item active">
                     <div class="card">
                       <div class="img-wrapper">
                         <img
-                          src="assets/images/carSample1.jpg"
+                          src="images/carSample1.jpg"
                           class="d-block w-100 card-img-top"
-                          alt="assets/images/"
+                          alt="images/"
                         />
                       </div>
                       <div class="card-body">
@@ -115,9 +115,9 @@
                     <div class="card">
                       <div class="img-wrapper">
                         <img
-                          src="assets/images/carSample2.jpg"
+                          src="images/carSample2.jpg"
                           class="d-block w-100 card-img-top"
-                          alt="assets/images/"
+                          alt="images/"
                         />
                       </div>
                       <div class="card-body">
@@ -134,9 +134,9 @@
                     <div class="card">
                       <div class="img-wrapper">
                         <img
-                          src="assets/images/carSample3.jpeg"
+                          src="images/carSample3.jpeg"
                           class="d-block w-100 card-img-top"
-                          alt="assets/images/"
+                          alt="images/"
                         />
                       </div>
                       <div class="card-body">
@@ -153,9 +153,9 @@
                     <div class="card">
                       <div class="img-wrapper">
                         <img
-                          src="assets/images/choco.png"
+                          src="images/choco.png"
                           class="d-block w-100 card-img-top"
-                          alt="assets/images/"
+                          alt="images/"
                         />
                       </div>
                       <div class="card-body">
@@ -172,9 +172,9 @@
                     <div class="card">
                       <div class="img-wrapper">
                         <img
-                          src="assets/images/smotthie.png"
+                          src="images/smotthie.png"
                           class="d-block w-100 card-img-top"
-                          alt="assets/images/"
+                          alt="images/"
                         />
                       </div>
                       <div class="card-body">
@@ -219,27 +219,74 @@
       </section>
       <!-- Best Sellers-->
       <section class="section" id="section-2">
-        <div class="container text-center">
-          <div class="row pt-5 row-sell">
-            <img
-              class="accordionImg"
-              src="assets/images/carSample1.jpg"
-              alt="Car Sample 1"
-            />
+        <div class="container pt-5 text-center">
+          <!--biscoff-->
+         <div class="row row-sell" id="biscoffrow">
+            <!-- image col -->
+            <div class="col-md-8 col-sm-8 img-col" style="background-color: #decc9d;">
+              <img
+                class="accordionImg origPos img-fluid"
+                id="biscoffImg"
+                src="images/BISCOFF BADDIE/Asset 33bmedium.png"
+                alt="Biscfoff Baddie"
+              />
+            </div>
+            <!-- text col -->
+            <div class="col-md-4 col-sm-4 text-col d-flex flex-column justify-content-center align-items-center" style="background-color: #A05205;">
+              <h3>BISCOFF BADDIE</h3>
+              <!-- put drink description on this LINE-->
+              <div class="letters-container mt-5 py-0 px-2">
+                <span class="letter" data-word="mall" data-img="images/BISCOFF BADDIE/Asset 33bsmall.png">S</span>
+                <span class="letter" data-word="edium" data-img="images/BISCOFF BADDIE/Asset 33bmedium.png">M</span>
+                <span class="letter" data-word="arge" data-img="images/BISCOFF BADDIE/Asset 33blarge.png">L</span>
+            </div>
+            </div>
           </div>
-          <div class="row pt-5 row-sell">
-            <img
-              class="accordionImg"
-              src="assets/images/carSample2.jpg"
-              alt="Car Sample 1"
-            />
+
+          <!--matcha-->
+          <div class="row row-sell" id="matcharow">
+            <!-- image col -->
+            <div class="col-md-8 col-sm-8 img-col" style="background-color: #C3CF78">
+              <img
+                class="accordionImg origPos img-fluid"
+                id="matchaImg"
+                src="images/BRAT MATCHA/Asset 32mmedium.png"
+                alt="BRAT MATCHA"
+              />
+            </div>
+            <!-- text col -->
+            <div class="col-md-4 col-sm-4 text-col d-flex flex-column justify-content-center align-items-center text-wrap" style="background-color: #63840F;">
+              <h3>BRAT MATCHA</h3>
+              Lorem ipsum congue erat consectetur per himenaeos maecenas viverra consequat.
+              <div class="letters-container mt-5 py-0 px-2">
+                <span class="letter" data-word="mall" data-img="images/BRAT MATCHA/Asset 32msmall.png">S</span>
+                <span class="letter" data-word="edium" data-img="images/BRAT MATCHA/Asset 32mmedium.png">M</span>
+                <span class="letter" data-word="arge" data-img="images/BRAT MATCHA/Asset 32mlarge.png">L</span>
+            </div>
+            </div>
           </div>
-          <div class="row pt-5 pb-5 row-sell">
-            <img
-              class="accordionImg"
-              src="assets/images/carSample3.jpeg"
-              alt="Car Sample 1"
-            />
+
+          <!--coco-->
+           <div class="row row-sell" id="cocorow">
+            <!-- image col -->
+            <div class="col-md-8 col-sm-8 img-col" style="background-color: #e4dab4">
+              <img
+                class="accordionImg origPos img-fluid"
+                id="matchaImg"
+                src="images/COCO LOCO/Asset 29cmedium.png"
+                alt="COCO LOCO"
+              />
+            </div>
+            <!-- text col -->
+            <div class="col-md-4 col-sm-4 text-col d-flex flex-column justify-content-center align-items-center text-wrap" style="background-color: #c98422;">
+              <h3>COCO LOCO</h3>
+              Lorem ipsum congue erat consectetur per himenaeos maecenas viverra consequat.
+              <div class="letters-container mt-5 py-0 px-2">
+                <span class="letter" data-word="mall" data-img="images\COCO LOCO\Asset 31csmall.png">S</span>
+                <span class="letter" data-word="edium" data-img="images\COCO LOCO\Asset 29cmedium.png">M</span>
+                <span class="letter" data-word="arge" data-img="images/COCO LOCO/Asset 28clarge.png">L</span>
+            </div>
+            </div>
           </div>
         </div>
       </section>
@@ -248,6 +295,11 @@
         <div class="container text-center">
           <div class="row">
             <h3>We're Hiring</h3>
+            <img
+                class="img-fluid" id="hiring"
+                src="images/hiring.png"
+                alt="We Are Hiring!"
+              />
           </div>
         </div>
       </section>
@@ -301,7 +353,7 @@
     ></script>
 
     <script src="carousel.js"></script>
-    <script src="accordion.js"></script>
+    <script src="rowsell.js"></script>
 
     <script>
       var toggler = document.querySelector(".navbar-toggler");

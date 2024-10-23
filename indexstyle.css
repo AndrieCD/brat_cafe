@@ -1,5 +1,6 @@
 * {
   box-sizing: border-box;
+  font-family: Arial;
 }
 
 header,
@@ -27,7 +28,7 @@ section {
 
 header {
   height: 100vh;
-  background-image: url("./assets/images/banner-bg.png");
+  background-image: url("images/banner-bg.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -62,16 +63,81 @@ h3 {
   overflow: hidden;
 }
 
+#section-2 {
+  height: 120em;
+}
+
+#section-2 .container {
+  height: 100%;
+  min-height: 100%;
+}
+
+.img-col,
+.text-col {
+  transition: all 0.5s ease;
+}
+
+.img-col {
+  position: relative; /* Positioning context for absolute positioning */
+  overflow: hidden; /* Hide any overflow of the image */
+}
+
 .accordionImg {
-  height: 35em;
-  object-fit: fill;
+  position: absolute; /* Position the image absolutely within the container */
+  top: 40%; /* Center the image vertically */
+  left: 50%; /* Center the image horizontally */
+  width: auto; /* Allow width to auto adjust */
+  height: 95%; /* Set height to 100% of the container */
+  object-fit: cover; /* Cover the container, cropping if necessary */
+}
+
+.origPos {
+  transform: translate(-53%, -50%); /* Adjust position to center */
+  transition: all 0.5s ease;
+}
+
+.imgReposition {
+  transform: translate(-39%, -50%);
+  transition: all 0.5s ease;
+}
+
+.row-sell {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  min-height: 27%;
+}
+
+.letters-container {
+  display: flex;
+  gap: 20px;
+  background-color: black;
+  padding: 10px;
+  border-radius: 15px;
+}
+
+.letter {
+  font-size: 20px;
+  cursor: pointer;
+  position: relative;
+  color: white;
+  display: inline-block;
+  transition: transform 0.2s ease-in-out, width 0.2s ease-in-out;
+}
+
+.letter.scale-up {
+  transform: scale(1.2);
+}
+
+.fade {
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
 }
 
 /* CAROUSEL */
 .carousel-inner {
   padding: 1em;
-  display: flex; /* Use flexbox */
-  overflow: hidden; /* Prevent overflow */
+  display: flex;
+  overflow: hidden;
 }
 
 .card {
@@ -119,6 +185,24 @@ h3 {
 }
 /* Mobile */
 @media (max-width: 767px) {
+  #section-2 {
+    height: 80em;
+  }
+  #section-2 .container {
+    padding-top: 0 !important;
+  }
+  .row-sell {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    min-height: 17%;
+  }
+  .img-col {
+    height: 12em;
+  }
+  .text-col {
+    height: 12em;
+  }
+
   .carousel-inner {
     max-width: 80%;
   }
@@ -155,10 +239,6 @@ h3 {
 
   .nav-item {
     margin: 0 !important;
-  }
-
-  .accordionImg {
-    height: 15em;
   }
 
   #brand {

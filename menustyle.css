@@ -1,0 +1,77 @@
+* {
+  box-sizing: border-box;
+  font-family: Arial;
+}
+
+header,
+section {
+  overflow-x: hidden;
+}
+
+#navbar {
+  transition: background-color 0.3s ease;
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba(0, 0, 0, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+.navbar-bg {
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+#navbar .nav-link {
+  color: black;
+}
+
+/* Desktop */
+@media (min-width: 768px) {
+  .navbar-brand img {
+    height: 3em;
+  }
+}
+/* Add top padding to the main section */
+main {
+  padding-top: 100px; /* Adjust based on the height of your navbar */
+}
+
+/* Desktop */
+@media (min-width: 768px) {
+  .navbar-brand img {
+    height: 3em;
+  }
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+  /* Reduce navbar padding */
+  .navbar {
+    padding: 0.5rem 1rem; /* Adjust as needed */
+  }
+
+  /* Reduce the logo size */
+  .navbar-brand img {
+    width: 30px; /* Adjust the logo size for mobile */
+    height: auto;
+  }
+
+  /* Optional: Adjust navbar brand text size */
+  .navbar-brand {
+    font-size: 1rem; /* Reduce font size */
+  }
+
+  /* Optional: Adjust navbar height */
+  #navbar-container {
+    min-height: 50px; /* Reduce the height of the navbar */
+  }
+
+  /* Reduce the size of the toggle button */
+  .navbar-toggler {
+    padding: 0.25rem 0.5rem;
+  }
+
+  .nav-item {
+    margin: 0 !important;
+  }
+}
