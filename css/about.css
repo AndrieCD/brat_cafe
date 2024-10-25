@@ -30,48 +30,29 @@ body {
   background-color: #eadfc3;
 }
 
-/* Desktop */
-@media (min-width: 768px) {
-  .navbar-brand img {
-    height: 3em;
-  }
-}
 main {
   padding-top: 100px;
 }
 
-h5 {
-  font-weight: 900;
-  font-size: x-large;
+.btn-brat {
+  background-color: #ff4081; /* Bright, fun color */
+  color: white;
+  font-weight: bold;
 }
 
-.card-title {
-  font-weight: 700;
-}
-
-.card:hover {
-  transform: scale(1.06);
+.btn-brat:hover {
+  background-color: #ff1f60; /* Darker shade on hover */
 }
 
 /* Desktop */
 @media (min-width: 768px) {
   .navbar-brand img {
     height: 3em;
-  }
-
-  .card {
-    max-height: 300px;
-    transition: transform 0.3s ease;
   }
 }
 
 /* Mobile */
 @media (max-width: 767px) {
-  .card {
-    max-height: 200px;
-    transition: transform 0.3s ease;
-  }
-
   .navbar {
     padding: 0.5rem 1rem;
   }
