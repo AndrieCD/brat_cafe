@@ -16,22 +16,22 @@ section {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba(0, 0, 0, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
 }
 
-/* Background color on scroll */
 .navbar-bg {
   background-color: rgb(255, 255, 255);
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Optional shadow to distinguish it */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 #navbar .nav-link {
   color: black;
+  font-size: 0.9em;
+}
+
+body {
+  background-color: #eadfc3;
 }
 
 header {
   height: 100vh;
-  background-image: url("images/banner-bg.png");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
 }
 
 #banner {
@@ -57,24 +57,18 @@ h3 {
   object-fit: contain;
 }
 
-#section-1 {
-  background-color: #f8f9fa;
-  height: 80%;
-  overflow: hidden;
-}
-
 #section-2 {
-  height: 120em;
+  height: 200vh;
 }
 
 #section-2 .container {
   height: 100%;
-  min-height: 100%;
 }
 
 .img-col,
 .text-col {
   transition: all 0.5s ease;
+  color: white;
 }
 
 .img-col {
@@ -87,24 +81,15 @@ h3 {
   top: 40%; /* Center the image vertically */
   left: 50%; /* Center the image horizontally */
   width: auto; /* Allow width to auto adjust */
-  height: 95%; /* Set height to 100% of the container */
-  object-fit: cover; /* Cover the container, cropping if necessary */
-}
-
-.origPos {
+  height: 100%; /* Set height to 100% of the container */
+  object-fit: contain; /* Cover the container, cropping if necessary */
   transform: translate(-53%, -50%); /* Adjust position to center */
-  transition: all 0.5s ease;
-}
-
-.imgReposition {
-  transform: translate(-39%, -50%);
-  transition: all 0.5s ease;
 }
 
 .row-sell {
   padding-top: 20px;
   padding-bottom: 20px;
-  min-height: 27%;
+  height: 33%;
 }
 
 .letters-container {
@@ -119,9 +104,20 @@ h3 {
   font-size: 20px;
   cursor: pointer;
   position: relative;
-  color: white;
   display: inline-block;
   transition: transform 0.2s ease-in-out, width 0.2s ease-in-out;
+  font-weight: bold;
+}
+
+.itemName {
+  font-weight: 900;
+}
+
+.bullet {
+  font-size: 20px;
+  position: relative;
+  color: white;
+  display: inline-block;
 }
 
 .letter.scale-up {
@@ -131,6 +127,11 @@ h3 {
 .fade {
   opacity: 0;
   transition: opacity 0.2s ease-in-out;
+}
+
+#section-1 {
+  background-color: #f8f9fa;
+  height: 80vh;
 }
 
 /* CAROUSEL */
@@ -169,6 +170,18 @@ h3 {
   max-height: 100%;
 }
 
+#hiring {
+  width: 50em;
+  margin: auto;
+  padding: 50px 0 50px 0;
+}
+
+#stampTitle,
+#stampCard {
+  width: 50em;
+  margin: auto;
+}
+
 /* Desktop */
 @media (min-width: 768px) {
   .carousel-item {
@@ -194,7 +207,7 @@ h3 {
   .row-sell {
     padding-top: 20px;
     padding-bottom: 20px;
-    min-height: 17%;
+    min-height: 9%;
   }
   .img-col {
     height: 12em;
@@ -211,28 +224,19 @@ h3 {
     height: 8em;
   }
 
-  /* Reduce navbar padding */
   .navbar {
-    padding: 0.5rem 1rem; /* Adjust as needed */
+    padding: 0.5rem 1rem;
   }
 
-  /* Reduce the logo size */
   .navbar-brand img {
-    width: 30px; /* Adjust the logo size for mobile */
+    width: 30px;
     height: auto;
   }
 
-  /* Optional: Adjust navbar brand text size */
-  .navbar-brand {
-    font-size: 1rem; /* Reduce font size */
-  }
-
-  /* Optional: Adjust navbar height */
   #navbar-container {
-    min-height: 50px; /* Reduce the height of the navbar */
+    min-height: 50px;
   }
 
-  /* Reduce the size of the toggle button */
   .navbar-toggler {
     padding: 0.25rem 0.5rem;
   }
@@ -250,5 +254,17 @@ h3 {
   #section-1 {
     background-color: #f8f9fa;
     height: 50%;
+  }
+
+  #hiring {
+    width: 15em;
+    margin: auto;
+    padding: 50px 0 50px 0;
+  }
+
+  #stampTitle,
+  #stampCard {
+    width: 20em;
+    margin: auto;
   }
 }

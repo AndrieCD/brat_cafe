@@ -23,6 +23,11 @@ section {
 
 #navbar .nav-link {
   color: black;
+  font-size: 0.9em;
+}
+
+body {
+  background-color: #eadfc3;
 }
 
 /* Desktop */
@@ -31,42 +36,55 @@ section {
     height: 3em;
   }
 }
-/* Add top padding to the main section */
 main {
-  padding-top: 100px; /* Adjust based on the height of your navbar */
+  padding-top: 100px;
+}
+
+h5 {
+  font-weight: 900;
+  font-size: x-large;
+}
+
+.card-title {
+  font-weight: 700;
+}
+
+.card:hover {
+  transform: scale(1.06);
 }
 
 /* Desktop */
 @media (min-width: 768px) {
   .navbar-brand img {
     height: 3em;
+  }
+
+  .card {
+    max-height: 300px;
+    transition: transform 0.3s ease;
   }
 }
 
 /* Mobile */
 @media (max-width: 767px) {
-  /* Reduce navbar padding */
-  .navbar {
-    padding: 0.5rem 1rem; /* Adjust as needed */
+  .card {
+    max-height: 200px;
+    transition: transform 0.3s ease;
   }
 
-  /* Reduce the logo size */
+  .navbar {
+    padding: 0.5rem 1rem;
+  }
+
   .navbar-brand img {
-    width: 30px; /* Adjust the logo size for mobile */
+    width: 30px;
     height: auto;
   }
 
-  /* Optional: Adjust navbar brand text size */
-  .navbar-brand {
-    font-size: 1rem; /* Reduce font size */
-  }
-
-  /* Optional: Adjust navbar height */
   #navbar-container {
-    min-height: 50px; /* Reduce the height of the navbar */
+    min-height: 50px;
   }
 
-  /* Reduce the size of the toggle button */
   .navbar-toggler {
     padding: 0.25rem 0.5rem;
   }

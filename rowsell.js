@@ -9,10 +9,10 @@ document.addEventListener("DOMContentLoaded", function () {
     productImage,
     productOrigSrc
   ) {
-    imgCol.classList.replace("col-md-8", "col-md-6");
-    textCol.classList.replace("col-md-4", "col-md-6");
-    imgCol.classList.replace("col-sm-8", "col-sm-6");
-    textCol.classList.replace("col-sm-4", "col-sm-6");
+    imgCol.classList.replace("col-md-9", "col-md-7");
+    textCol.classList.replace("col-md-3", "col-md-5");
+    imgCol.classList.replace("col-sm-9", "col-sm-7");
+    textCol.classList.replace("col-sm-3", "col-sm-5");
 
     productImage.classList.add("imgReposition");
     productImage.classList.remove("origPos");
@@ -25,10 +25,10 @@ document.addEventListener("DOMContentLoaded", function () {
     productImage,
     productOrigSrc
   ) {
-    imgCol.classList.replace("col-md-6", "col-md-8");
-    textCol.classList.replace("col-md-6", "col-md-4");
-    imgCol.classList.replace("col-sm-6", "col-sm-8");
-    textCol.classList.replace("col-sm-6", "col-sm-4");
+    imgCol.classList.replace("col-md-7", "col-md-9");
+    textCol.classList.replace("col-md-5", "col-md-3");
+    imgCol.classList.replace("col-sm-7", "col-sm-9");
+    textCol.classList.replace("col-sm-5", "col-sm-3");
     productImage.classList.remove("imgReposition");
     productImage.classList.add("origPos");
   }
