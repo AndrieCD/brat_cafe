@@ -9,7 +9,7 @@
       integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
       crossorigin="anonymous"
     />
-    <title>Title</title>
+    <title>Home</title>
 
     <link rel="stylesheet" href="css/indexstyle.css" />
   </head>
@@ -66,10 +66,30 @@
           </div>
         </div>
       </nav>
-      <!-- Banner-->
-      <div class="container text-center" id="banner">
-        <div class="row">
-          <div class="col-md-10 col-sm-10">
+      <!-- Banner -->
+      <div class="container text-center w-100" id="banner">
+        <!-- Video Background -->
+        <video
+          autoplay
+          muted
+          loop
+          class="w-100"
+          style="
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+          "
+          id="vid-bg"
+        >
+          <source src="images/vid-bg.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+
+        <div class="row text-center align-items-center" style="height: 100vh">
+          <div class="col-md-10 col-sm-10 mx-auto">
             <img
               src="images/brand.png"
               id="brand"
@@ -220,7 +240,7 @@
       </section>
       <!-- Best Sellers-->
       <section class="section" id="section-2">
-        <div class="container pt-5 text-center">
+        <div class="container text-center">
           <!--matcha-->
           <div class="row row-sell" id="matcharow">
             <!-- image col -->
@@ -423,13 +443,30 @@
     <script>
       var toggler = document.querySelector(".navbar-toggler");
       var navbar = document.getElementById("navbar");
+      var video = document.getElementById("vid-bg");
+      var navItems = document.querySelectorAll(".nav-link");
 
       window.onscroll = function () {
         if (window.scrollY > 50) {
           navbar.classList.add("navbar-bg");
+
+          navItems.forEach(function (item) {
+            item.classList.add("navitem-color");
+          });
         } else {
           navbar.classList.remove("navbar-bg");
+
+          navItems.forEach(function (item) {
+            item.classList.remove("navitem-color");
+          });
         }
+
+        // Adjust video opacity based on scroll position
+        var scrollPosition = window.scrollY;
+        var maxScroll = 500; // Adjust this value to control when the opacity change is complete
+        var newOpacity = 1 - Math.min(scrollPosition / maxScroll, 1); // Ensures opacity is between 0 and 1
+
+        video.style.opacity = newOpacity; // Apply the new opacity to the video
       };
 
       toggler.addEventListener("click", function () {
