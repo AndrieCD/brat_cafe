@@ -3,8 +3,7 @@
   font-family: Arial;
 }
 
-header,
-section {
+header {
   overflow-x: hidden;
 }
 
@@ -23,9 +22,14 @@ section {
 
 #navbar .nav-link {
   color: black;
-  font-size: 0.9em;
+  font-size: 0.7em;
 }
 
+#menuTitleIcon {
+  width: auto;
+  height: 150px;
+  object-fit: contain;
+}
 body {
   background-color: #eadfc3;
 }
@@ -39,33 +43,44 @@ h5 {
   font-size: x-large;
 }
 
-.card-title {
-  font-weight: 700;
-}
-
 .card:hover {
   transform: scale(1.06);
+}
+
+.card-img-top {
+  width: 100%;
+  height: 350px;
+  background: none;
+  border: none;
+}
+
+.card {
+  transition: transform 0.3s ease;
+  background: none;
+  border: none;
+}
+
+.card-row {
+  margin-left: 80px;
+}
+
+.col-1 {
+  width: 65px;
+}
+
+.section {
+  height: 400px;
 }
 
 /* Desktop */
 @media (min-width: 768px) {
   .navbar-brand img {
-    height: 3em;
-  }
-
-  .card {
-    max-height: 300px;
-    transition: transform 0.3s ease;
+    height: 3.15em;
   }
 }
 
 /* Mobile */
 @media (max-width: 767px) {
-  .card {
-    max-height: 200px;
-    transition: transform 0.3s ease;
-  }
-
   .navbar {
     padding: 0.5rem 1rem;
   }
@@ -85,5 +100,20 @@ h5 {
 
   .nav-item {
     margin: 0 !important;
+  }
+
+  .card-row {
+    margin-left: 20px;
+  }
+
+  .section {
+    height: auto;
+    max-height: 850px;
+  }
+
+  #menuTitleIcon {
+    width: auto;
+    height: 125px;
+    object-fit: contain;
   }
 }
