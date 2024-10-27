@@ -27,7 +27,7 @@ header {
 
 #menuTitleIcon {
   width: auto;
-  height: 150px;
+  height: 100px;
   object-fit: contain;
 }
 body {
@@ -48,10 +48,12 @@ h5 {
 }
 
 .card-img-top {
-  width: 100%;
-  height: 350px;
+  padding: 0;
   background: none;
   border: none;
+  height: 100%;
+  width: auto;
+  object-fit: contain;
 }
 
 .card {
@@ -61,7 +63,15 @@ h5 {
 }
 
 .card-row {
-  margin-left: 80px;
+  margin-left: 60px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.flex-item {
+  flex: 1 1 20%;
+  max-width: 20%;
 }
 
 .col-1 {
@@ -69,7 +79,7 @@ h5 {
 }
 
 .section {
-  height: 400px;
+  height: auto;
 }
 
 /* Desktop */
@@ -106,14 +116,18 @@ h5 {
     margin-left: 20px;
   }
 
+  .flex-item {
+    flex: 1 1 45%;
+    max-width: 45%;
+  }
+
   .section {
     height: auto;
-    max-height: 850px;
   }
 
   #menuTitleIcon {
     width: auto;
-    height: 125px;
+    height: 75px;
     object-fit: contain;
   }
 }
