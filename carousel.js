@@ -42,7 +42,6 @@ if (window.matchMedia("(min-width: 768px)").matches) {
   $(".carousel-inner").animate({ scrollLeft: scrollPosition }, 0);
 
   $("#carouselExampleControls .carousel-control-next").on("click", function () {
-    // Adjusted condition to allow scrolling to the last card
     if (scrollPosition < carouselWidth - cardWidth) {
       scrollPosition += cardWidth;
       $("#carouselExampleControls .carousel-inner").animate(

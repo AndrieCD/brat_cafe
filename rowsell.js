@@ -1,7 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
   const rows = document.querySelectorAll(".row-sell");
 
-  // Function to handle mouseenter and mouseleave events
   function handleMouseEnter(
     row,
     imgCol,
@@ -33,7 +32,6 @@ document.addEventListener("DOMContentLoaded", function () {
     productImage.classList.add("origPos");
   }
 
-  // Handle desktop hover events
   if (window.matchMedia("(min-width: 768px)").matches) {
     rows.forEach((row) => {
       const imgCol = row.querySelector(".img-col");
@@ -69,7 +67,7 @@ document.addEventListener("DOMContentLoaded", function () {
             }, 50);
           }, 200);
 
-          letter.textContent += word; // Update text
+          letter.textContent += word;
           letter.classList.add("scale-up");
 
           setTimeout(() => {
@@ -88,14 +86,13 @@ document.addEventListener("DOMContentLoaded", function () {
             }, 50);
           }, 200);
 
-          letter.textContent = originalText; // Restore original text
+          letter.textContent = originalText;
           letter.classList.add("scale-up");
           letter.classList.remove("scale-up");
         });
       });
     });
   } else {
-    // Handle mobile click events
     rows.forEach((row) => {
       const imgCol = row.querySelector(".img-col");
       const textCol = row.querySelector(".text-col");
@@ -105,9 +102,9 @@ document.addEventListener("DOMContentLoaded", function () {
       const letters = row.querySelectorAll(".letter");
       const originalTexts = Array.from(letters).map(
         (letter) => letter.textContent
-      ); // Store original texts
+      );
 
-      let currentlyExpandedLetter = null; // Track the currently expanded letter
+      let currentlyExpandedLetter = null;
 
       letters.forEach((letter, index) => {
         letter.addEventListener("click", function () {
@@ -115,17 +112,14 @@ document.addEventListener("DOMContentLoaded", function () {
           const word = letter.getAttribute("data-word");
 
           if (currentlyExpandedLetter && currentlyExpandedLetter !== letter) {
-            // Collapse the previously expanded letter
             currentlyExpandedLetter.textContent =
               originalTexts[
                 Array.from(letters).indexOf(currentlyExpandedLetter)
-              ]; // Restore original text
+              ];
             currentlyExpandedLetter.classList.remove("scale-up");
           }
 
-          // Check if the current letter is already expanded
           if (letter.textContent === originalTexts[index]) {
-            // Expand this letter
             productImage.classList.add("fade");
 
             setTimeout(() => {
@@ -136,16 +130,15 @@ document.addEventListener("DOMContentLoaded", function () {
               }, 50);
             }, 200);
 
-            letter.textContent = originalTexts[index] + word; // Update text correctly
+            letter.textContent = originalTexts[index] + word;
             letter.classList.add("scale-up");
 
             setTimeout(() => {
               letter.classList.remove("scale-up");
             }, 150);
 
-            currentlyExpandedLetter = letter; // Set this letter as currently expanded
+            currentlyExpandedLetter = letter;
           } else {
-            // Collapse this letter
             productImage.classList.remove("fade");
 
             setTimeout(() => {
@@ -156,14 +149,14 @@ document.addEventListener("DOMContentLoaded", function () {
               }, 50);
             }, 200);
 
-            letter.textContent = originalTexts[index]; // Restore original text correctly
+            letter.textContent = originalTexts[index];
             letter.classList.add("scale-up");
 
             setTimeout(() => {
               letter.classList.remove("scale-up");
             }, 150);
 
-            currentlyExpandedLetter = null; // Reset the currently expanded letter
+            currentlyExpandedLetter = null;
           }
         });
       });

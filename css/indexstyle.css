@@ -9,7 +9,7 @@ section {
 }
 
 #navbar {
-  transition: background-color 0.3s ease; /* Smooth transition */
+  transition: background-color 0.3s ease;
 }
 
 .navbar-toggler-icon {
@@ -79,18 +79,18 @@ h3 {
 }
 
 .img-col {
-  position: relative; /* Positioning context for absolute positioning */
-  overflow: hidden; /* Hide any overflow of the image */
+  position: relative;
+  overflow: hidden;
 }
 
 .accordionImg {
-  position: absolute; /* Position the image absolutely within the container */
-  top: 40%; /* Center the image vertically */
-  left: 50%; /* Center the image horizontally */
-  width: auto; /* Allow width to auto adjust */
-  height: 100%; /* Set height to 100% of the container */
-  object-fit: contain; /* Cover the container, cropping if necessary */
-  transform: translate(-53%, -50%); /* Adjust position to center */
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  width: auto;
+  height: 100%;
+  object-fit: contain;
+  transform: translate(-53%, -50%);
 }
 
 .row-sell {
